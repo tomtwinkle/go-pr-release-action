@@ -1,7 +1,8 @@
 # go-pr-release-action
-[go-pr-release](https://github.com/tomtwinkle/go-pr-release) custom action for Github Action
+[go-pr-release](https://github.com/tomtwinkle/go-pr-release) custom action for Github Action.
 
-## Github Actions Example
+## Usage
+For example, the workflow to create a pull request for release with go-pr-release is as follows.
 
 ```yaml
 name: go-pr-release
@@ -30,3 +31,7 @@ jobs:
         GO_PR_RELEASE_REVIEWERS: tomtwinkle              # Optional. PullRequest reviewers. Multiple reviewers can be specified, separated by `commas`
         GO_PR_RELEASE_DRY_RUN: false                     # Optional. if true, display only the results to be created without creating PullRequest
 ```
+
+## Environment variables
+
+The same as [go-pr-release configuration](https://github.com/tomtwinkle/go-pr-release#configuration) can be used.
