@@ -1,0 +1,9 @@
+name: "go-pr-release"
+description: "Run go-pr-release"
+author: "tomtwinkle <tomtinkle29@gmail.com>"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-pull-request"
+  color: "green"
