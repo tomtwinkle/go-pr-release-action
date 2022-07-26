@@ -1,4 +1,4 @@
-FROM ubuntu:latest as download
+FROM debian:bullseye-slim as download
 WORKDIR /download
 RUN apt-get update && \
     apt-get install --assume-yes --no-install-recommends curl jq ca-certificates && \
