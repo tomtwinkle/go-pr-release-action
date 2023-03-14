@@ -5,10 +5,8 @@ RUN apt-get update && \
     update-ca-certificates && \
     rm -rf /var/cache/apt/* /var/lib/apt/lists/* && \
     rm -rf /tmp/* /var/tmp/*
-RUN curl https://api.github.com/repos/tomtwinkle/go-pr-release/releases/latest | \
-    jq '.assets[] | select(.name | contains("linux_amd64")) | .browser_download_url' | \
-    xargs curl -L | \
-    tar -xz
+RUN curl -s -L https://github.com/tomtwinkle/go-pr-release/releases/latest/download/go-pr-release_linux_x86_64.tar.gz | \
+    tar -xvz
 
 FROM gcr.io/distroless/base:latest as base
 WORKDIR /app
